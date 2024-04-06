@@ -1,5 +1,6 @@
 package com.nicos.texttospeechsetup
 
+import android.content.Context
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.widget.Toast
@@ -29,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    TextToSpeech()
+                    TextToSpeechView()
                 }
             }
         }
@@ -37,9 +38,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TextToSpeech(modifier: Modifier = Modifier) {
+fun TextToSpeechView(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val textToSpeech = TextToSpeech(context) { status -> }
+    val textToSpeech = initTextToSpeech(context)
 
     Box(contentAlignment = Alignment.Center) {
         Button(onClick = {
@@ -50,8 +51,46 @@ fun TextToSpeech(modifier: Modifier = Modifier) {
     }
 }
 
+/**
+ * Get instance Text To Speech
+ * */
+fun initTextToSpeech(context: Context) = TextToSpeech(context) { status ->
+    when (status) {
+        TextToSpeech.ERROR_SYNTHESIS,
+        TextToSpeech.ERROR,
+        TextToSpeech.ERROR_SERVICE,
+        TextToSpeech.ERROR_NETWORK,
+        TextToSpeech.ERROR_NETWORK_TIMEOUT,
+        TextToSpeech.ERROR_INVALID_REQUEST,
+        TextToSpeech.ERROR_NOT_INSTALLED_YET,
+        TextToSpeech.ERROR_OUTPUT -> {
+            Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+        }
+
+        TextToSpeech.LANG_COUNTRY_VAR_AVAILABLE -> {
+            Toast.makeText(context, "Language country var available", Toast.LENGTH_SHORT).show()
+        }
+
+        TextToSpeech.LANG_COUNTRY_AVAILABLE -> {
+            Toast.makeText(context, "Language country available", Toast.LENGTH_SHORT).show()
+        }
+
+        TextToSpeech.LANG_AVAILABLE -> {
+            Toast.makeText(context, "Language available", Toast.LENGTH_SHORT).show()
+        }
+
+        TextToSpeech.LANG_MISSING_DATA -> {
+            Toast.makeText(context, "Language missing data", Toast.LENGTH_SHORT).show()
+        }
+
+        TextToSpeech.LANG_NOT_SUPPORTED -> {
+            Toast.makeText(context, "Language not supported", Toast.LENGTH_SHORT).show()
+        }
+    }
+}
+
 @Preview
 @Composable
 fun Preview() {
-    TextToSpeech()
+    TextToSpeechView()
 }
