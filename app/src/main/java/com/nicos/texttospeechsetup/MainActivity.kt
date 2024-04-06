@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TextToSpeechView(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val textToSpeech = getIntanceTextToSpeech(context)
+    val textToSpeech = getInstanceTextToSpeech(context)
 
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Button(onClick = {
@@ -59,7 +59,7 @@ fun TextToSpeechView(modifier: Modifier = Modifier) {
 /**
  * Get instance Text To Speech
  * */
-fun getIntanceTextToSpeech(context: Context) = TextToSpeech(context) { status ->
+fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status ->
     when (status) {
         TextToSpeech.ERROR_SYNTHESIS,
         TextToSpeech.ERROR,
