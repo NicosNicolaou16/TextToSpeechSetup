@@ -19,7 +19,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.nicos.texttospeechsetup.ui.theme.TextToSpeechSetupTheme
-import java.util.Locale
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +40,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TextToSpeechView(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    val textToSpeech = initTextToSpeech(context)
+    val textToSpeech = getIntanceTextToSpeech(context)
 
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Button(onClick = {
@@ -60,7 +59,7 @@ fun TextToSpeechView(modifier: Modifier = Modifier) {
 /**
  * Get instance Text To Speech
  * */
-fun initTextToSpeech(context: Context) = TextToSpeech(context) { status ->
+fun getIntanceTextToSpeech(context: Context) = TextToSpeech(context) { status ->
     when (status) {
         TextToSpeech.ERROR_SYNTHESIS,
         TextToSpeech.ERROR,
