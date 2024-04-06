@@ -16,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.nicos.texttospeechsetup.ui.theme.TextToSpeechSetupTheme
 import java.util.Locale
@@ -51,7 +52,7 @@ fun TextToSpeechView(modifier: Modifier = Modifier) {
                 null
             )
         }) {
-            Text(text = "Text To Speech")
+            Text(text = stringResource(R.string.click_text_to_speech))
         }
     }
 }

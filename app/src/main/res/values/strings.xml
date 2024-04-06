@@ -7,4 +7,5 @@
     <string name="language_available">Language available</string>
     <string name="language_missing_data">Language missing data</string>
     <string name="language_not_supported">Language not supported</string>
+    <string name="click_text_to_speech">Click Text To Speech</string>
 </resources>
