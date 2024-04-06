@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TextToSpeechSetup</string>
+    <string name="hello_im_nicos_nicolaou_and_i_just_show_the_simple_setup_for_text_to_speech">Hello, Im Nicos Nicolaou and I just show the simple setup for Text To Speech</string>
+    <string name="error">Error</string>
+    <string name="language_country_var_available">Language country var available</string>
+    <string name="language_country_available">Language country available</string>
+    <string name="language_available">Language available</string>
+    <string name="language_missing_data">Language missing data</string>
+    <string name="language_not_supported">Language not supported</string>
 </resources>

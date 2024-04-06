@@ -42,11 +42,16 @@ fun TextToSpeechView(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val textToSpeech = initTextToSpeech(context)
 
-    Box(contentAlignment = Alignment.Center) {
+    Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Button(onClick = {
-            textToSpeech.speak("test demo", TextToSpeech.QUEUE_FLUSH, null, null)
+            textToSpeech.speak(
+                context.getString(R.string.hello_im_nicos_nicolaou_and_i_just_show_the_simple_setup_for_text_to_speech),
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }) {
-            Text(text = "Text To Speech Button")
+            Text(text = "Text To Speech")
         }
     }
 }
@@ -64,27 +69,42 @@ fun initTextToSpeech(context: Context) = TextToSpeech(context) { status ->
         TextToSpeech.ERROR_INVALID_REQUEST,
         TextToSpeech.ERROR_NOT_INSTALLED_YET,
         TextToSpeech.ERROR_OUTPUT -> {
-            Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, context.getString(R.string.error), Toast.LENGTH_SHORT).show()
         }
 
         TextToSpeech.LANG_COUNTRY_VAR_AVAILABLE -> {
-            Toast.makeText(context, "Language country var available", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                context.getString(R.string.language_country_var_available), Toast.LENGTH_SHORT
+            ).show()
         }
 
         TextToSpeech.LANG_COUNTRY_AVAILABLE -> {
-            Toast.makeText(context, "Language country available", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                context.getString(R.string.language_country_available), Toast.LENGTH_SHORT
+            ).show()
         }
 
         TextToSpeech.LANG_AVAILABLE -> {
-            Toast.makeText(context, "Language available", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                context.getString(R.string.language_available), Toast.LENGTH_SHORT
+            ).show()
         }
 
         TextToSpeech.LANG_MISSING_DATA -> {
-            Toast.makeText(context, "Language missing data", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                context.getString(R.string.language_missing_data), Toast.LENGTH_SHORT
+            ).show()
         }
 
         TextToSpeech.LANG_NOT_SUPPORTED -> {
-            Toast.makeText(context, "Language not supported", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                context.getString(R.string.language_not_supported), Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }
