@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    TextToSpeechView()
+                    TextToSpeechExample()
                 }
             }
         }
@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun TextToSpeechView(modifier: Modifier = Modifier) {
+fun TextToSpeechExample(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val textToSpeech = getInstanceTextToSpeech(context)
 
@@ -112,5 +112,5 @@ fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status -
 @Preview
 @Composable
 fun Preview() {
-    TextToSpeechView()
+    TextToSpeechExample()
 }
