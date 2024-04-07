@@ -60,6 +60,9 @@ fun TextToSpeechExample(modifier: Modifier = Modifier) {
  * Get instance Text To Speech
  * */
 fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status ->
+    /**
+     * Optional
+     * */
     when (status) {
         TextToSpeech.ERROR_SYNTHESIS,
         TextToSpeech.ERROR,

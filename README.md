@@ -15,6 +15,9 @@ Initialize and get instance for Text To Speech <br />
 
 ```Kotlin
 fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status ->
+    /**
+     * Optional
+     * */
     when (status) {
         TextToSpeech.ERROR_SYNTHESIS,
         TextToSpeech.ERROR,
@@ -66,6 +69,8 @@ fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status -
 ```
 
 ## Step 2:
+
+Initialize the method speak(...) and pass a text
 
 ```Kotlin
 val context = LocalContext.current
