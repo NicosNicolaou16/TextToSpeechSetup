@@ -1,6 +1,6 @@
 # Text To Speech Setup
 
-For this project is the setup for the Text To Speech.
+This project shows the setup for the Text To Speech.
 
 Target SDK version: 34 <br />
 Minimum SDK version: 27 <br />
