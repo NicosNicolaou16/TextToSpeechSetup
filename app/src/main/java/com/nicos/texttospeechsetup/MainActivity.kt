@@ -45,7 +45,7 @@ fun TextToSpeechExample(modifier: Modifier = Modifier) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Button(onClick = {
             textToSpeech.speak(
-                context.getString(R.string.hello_im_nicos_nicolaou_and_i_just_show_the_simple_setup_for_text_to_speech),
+                context.getString(R.string.hello_im_nicos_nicolaou_and_i_just_show_a_simple_setup_for_text_to_speech),
                 TextToSpeech.QUEUE_FLUSH,
                 null,
                 null
