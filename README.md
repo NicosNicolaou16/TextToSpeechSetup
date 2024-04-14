@@ -92,7 +92,7 @@ Box(modifier = modifier, contentAlignment = Alignment.Center) {
 
 ## Check my article
 
- <br />
+https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1 <br />
 
 # References
 
