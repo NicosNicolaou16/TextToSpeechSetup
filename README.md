@@ -90,10 +90,6 @@ Box(modifier = modifier, contentAlignment = Alignment.Center) {
 }
 ```
 
-## Check my article
-
-https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1 <br />
-
 > [!IMPORTANT]  
 > Check my article for the setup :point_right: [Text To Speech Setup For Android - Medium](https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1) :point_left: <br />
 
