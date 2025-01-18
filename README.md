@@ -7,9 +7,9 @@ Minimum SDK version: 27 <br />
 Kotlin version: 2.0.20 <br />
 Gradle version: 8.6.0 <br />
 
-## Step 1:
+# Setup
 
-## Check my article
+## Step 1:
 
 Initialize and get instance for Text To Speech <br />
 
