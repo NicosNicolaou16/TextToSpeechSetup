@@ -2,11 +2,6 @@
 
 This project demonstrates the setup for Text-to-Speech.
 
-Target SDK version: 34 <br />
-Minimum SDK version: 27 <br />
-Kotlin version: 2.0.20 <br />
-Gradle version: 8.6.0 <br />
-
 # Setup
 
 ## Step 1:
@@ -92,6 +87,13 @@ Box(modifier = modifier, contentAlignment = Alignment.Center) {
 
 > [!IMPORTANT]  
 > Check my article for the setup :point_right: [Text To Speech Setup For Android - Medium](https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1) :point_left: <br />
+
+# Versioning
+
+Target SDK version: 34 <br />
+Minimum SDK version: 27 <br />
+Kotlin version: 2.0.20 <br />
+Gradle version: 8.6.0 <br />
 
 # References
 
