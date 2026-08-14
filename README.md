@@ -102,7 +102,7 @@ Box(modifier = modifier, contentAlignment = Alignment.Center) {
 
 ## 🔧 Versioning
 
-- **Target SDK:** **36**
+- **Target SDK:** **37**
 - **Minimum SDK:** **29**
 - **Kotlin Version:** **2.2.10**
 - **Gradle Version:** **8.12.1**
