@@ -42,10 +42,14 @@ fun TextToSpeechExample(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val textToSpeech = getInstanceTextToSpeech(context)
 
+    val ttsText = stringResource(
+        id = R.string.hello_im_nicos_nicolaou_and_i_just_show_a_simple_setup_for_text_to_speech
+    )
+
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Button(onClick = {
             textToSpeech.speak(
-                context.getString(R.string.hello_im_nicos_nicolaou_and_i_just_show_a_simple_setup_for_text_to_speech),
+                ttsText,
                 TextToSpeech.QUEUE_FLUSH,
                 null,
                 null
