@@ -104,8 +104,8 @@ Box(modifier = modifier, contentAlignment = Alignment.Center) {
 
 - **Target SDK:** **37**
 - **Minimum SDK:** **29**
-- **Kotlin Version:** **2.2.10**
-- **Gradle Version:** **8.12.1**
+- **Kotlin Version:** **2.4.10**
+- **Gradle Version:** **9.3.1**
 
 ## 📚 References & Tutorials
 
