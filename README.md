@@ -1,14 +1,29 @@
 # Text To Speech Setup
 
-This project demonstrates the setup for Text-to-Speech.
+[![Linktree](https://img.shields.io/badge/linktree-1de9b6?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/nicos_nicolaou)
+[![Site](https://img.shields.io/badge/Site-blue?style=for-the-badge&label=Web)](https://nicosnicolaou16.github.io/)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/nicolaou_nicos)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicos-nicolaou-a16720aa)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@nicosnicolaou)
+[![Mastodon](https://img.shields.io/badge/-MASTODON-%232B90D9?style=for-the-badge&logo=mastodon&logoColor=white)](https://androiddev.social/@nicolaou_nicos)
+[![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=Bluesky&logoColor=white)](https://bsky.app/profile/nicolaounicos.bsky.social)
+[![Dev.to blog](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/nicosnicolaou16)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@nicosnicolaou16)
+[![Google Developer Profile](https://img.shields.io/badge/Developer_Profile-blue?style=for-the-badge&label=Google)](https://g.dev/nicolaou_nicos)
 
-# Setup
+This project demonstrates the setup for **Text-to-Speech** on Android using Jetpack Compose and Kotlin. It shows how to initialize a `TextToSpeech` instance, handle status callbacks, and speak a text string with a simple button.
 
-## Step 1:
+> [!IMPORTANT]
+> A detailed step-by-step guide is available on Medium!  
+> 👉 **[Text To Speech Setup For Android](https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1)** 👈
 
-Initialize and get instance for Text To Speech <br />
+## 🚀 Setup Steps
 
-```Kotlin
+### 1. Initialize the Text-to-Speech Instance
+
+Initialize and get an instance for Text To Speech:
+
+```kotlin
 fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status ->
     /**
      * Optional
@@ -63,11 +78,11 @@ fun getInstanceTextToSpeech(context: Context) = TextToSpeech(context) { status -
 }
 ```
 
-## Step 2:
+### 2. Speak the Text
 
-Initialize the method speak(...) and pass a text
+Initialize the `speak(...)` method and pass a text:
 
-```Kotlin
+```kotlin
 val context = LocalContext.current
 val textToSpeech = getInstanceTextToSpeech(context)
 
@@ -85,16 +100,23 @@ Box(modifier = modifier, contentAlignment = Alignment.Center) {
 }
 ```
 
-> [!IMPORTANT]  
-> Check my article for the setup :point_right: [Text To Speech Setup For Android - Medium](https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1) :point_left: <br />
+## 🔧 Versioning
 
-# Versioning
+- **Target SDK:** **37**
+- **Minimum SDK:** **29**
+- **Kotlin Version:** **2.4.10**
+- **Gradle Version:** **9.3.1**
 
-Target SDK version: 36 <br />
-Minimum SDK version: 29 <br />
-Kotlin version: 2.2.10 <br />
-Gradle version: 8.12.1 <br />
+## 📚 References & Tutorials
 
-# References
+- **Documentation:** [TextToSpeech - Android Developers](https://developer.android.com/reference/kotlin/android/speech/tts/TextToSpeech)
+- **Article:** [Text To Speech Setup For Android - Medium](https://medium.com/@nicosnicolaou/text-to-speech-setup-for-android-109c342ecdd1)
 
-https://developer.android.com/reference/kotlin/android/speech/tts/TextToSpeech <br />
+## ⭐ Stargazers
+
+If you enjoy this project, please give it a star!
+Check out all the stargazers here: [Stargazers on GitHub](https://github.com/NicosNicolaou16/TextToSpeechSetup/stargazers)
+
+## 🙏 Support & Contributions
+
+This project is actively maintained. Feedback, bug reports, and feature requests are welcome! Please feel free to **open an issue** or submit a **pull request**.
